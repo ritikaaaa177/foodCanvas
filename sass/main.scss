@@ -60,7 +60,6 @@ body {
 }
 
 .navbar {
-  // border: 2px solid red;
   width: 887px;
   height: 59px;
   position: relative;
@@ -83,7 +82,6 @@ body {
     top: 9px;
     border-radius: 13px;
     left: 92px;
-    /* outline: orange; */
     border: 2px solid $varcolor3;
     text-align: center;
   }
@@ -100,7 +98,6 @@ body {
 .container {
   width: 887px;
   height: 700px;
-  // border: 2px solid red;
   position: relative;
   left: 300px;
   top: 60px;
@@ -112,12 +109,10 @@ body {
 
   .card1 {
     width: 300px;
-    // border: 2px solid red;
     background-color: $varcolor1;
   }
 
   .card2 {
-    // border: 2px solid green;
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -137,6 +132,34 @@ body {
       .div1 {
         height: 80px;
         // border: 2px solid red;
+        display: flex;
+        flex-direction: row;
+        background-color: $varcolor4;
+
+        .clock {
+          color: #e77913;
+          position: relative;
+          top: 22px;
+          left: 36px;
+          font-size: 17px;
+        }
+
+        .ck-time {
+          margin: 19px 43px;
+        }
+
+        .person {
+          color: #e77913;
+          position: relative;
+          top: 17px;
+          left: 3px;
+          font-size: 24px;
+        }
+      }
+
+      .servings {
+        margin-top: 19px;
+        margin-left: 9px;
       }
     }
   }

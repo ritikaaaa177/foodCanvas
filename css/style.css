@@ -27,7 +27,6 @@ body {
     top: 9px;
     border-radius: 13px;
     left: 92px;
-    /* outline: orange; */
     border: 2px solid orange;
     text-align: center; }
   .navbar .add-recipe {
@@ -68,4 +67,24 @@ body {
       height: 400px;
       background-color: #edf6f9; }
       .container .card2 .subcard2 .div1 {
-        height: 80px; }
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        background-color: white; }
+        .container .card2 .subcard2 .div1 .clock {
+          color: #e77913;
+          position: relative;
+          top: 22px;
+          left: 36px;
+          font-size: 17px; }
+        .container .card2 .subcard2 .div1 .ck-time {
+          margin: 19px 43px; }
+        .container .card2 .subcard2 .div1 .person {
+          color: #e77913;
+          position: relative;
+          top: 17px;
+          left: 3px;
+          font-size: 24px; }
+      .container .card2 .subcard2 .servings {
+        margin-top: 19px;
+        margin-left: 9px; }

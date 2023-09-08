@@ -26,25 +26,28 @@ const fetchapi = async function () {
       title: recipe.title,
     };
 
-    console.log(recipe.imageUrl);
+    console.log(recipes);
 
     const markup = ` <div class="card1">
 
     Hi i am search bar
 </div>
 <div class="card2">
-<div class="subcard1">
+    <div class="subcard1">
 
-    <img src="${recipes.imageUrl}" alt="recipeimage">
-</div>
-<div class="subcard2">
-    <div class="div1">
-        Hi, i am division1
+        <img src="${recipes.imageUrl}" alt="recipeimage">
     </div>
-    <div class="div2">
-        Hi, I am division2
+    <div class="subcard2">
+        <div class="div1">
+        <i class="fa-solid fa-clock   clock" style="color: #e77913;"></i>
+            <p class="ck-time">${recipes.cookingTime} minutes</p>
+            <i class="fa-solid fa-person person" style="color: #e77913;"></i>
+            <p class="servings">${recipes.servings} people</p>
+        </div>
+        <div class="div2">
+            Hi, I am division2
+        </div>
     </div>
-</div>
 </div>`;
 
     container.insertAdjacentHTML("afterbegin", markup);
@@ -55,4 +58,4 @@ const fetchapi = async function () {
 
 fetchapi();
 
-// console.log("after api call");
+console.log("after api call");
