@@ -1,6 +1,7 @@
 //fetch api for dish using axios library
 
 console.log("before api call");
+const container = document.querySelector(".container");
 
 const fetchapi = async function () {
   try {
@@ -8,7 +9,8 @@ const fetchapi = async function () {
       "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886"
     );
     // console.log(res.data);
-    console.log(res.data.data.recipe);
+
+    // console.log(res.data.data.recipe);
     let { recipe } = res.data.data;
 
     recipes = {
@@ -23,7 +25,29 @@ const fetchapi = async function () {
       sourceUrl: recipe.source_url,
       title: recipe.title,
     };
-    console.log(recipes);
+
+    console.log(recipe.imageUrl);
+
+    const markup = ` <div class="card1">
+
+    Hi i am search bar
+</div>
+<div class="card2">
+<div class="subcard1">
+
+    <img src="${recipes.imageUrl}" alt="recipeimage">
+</div>
+<div class="subcard2">
+    <div class="div1">
+        Hi, i am division1
+    </div>
+    <div class="div2">
+        Hi, I am division2
+    </div>
+</div>
+</div>`;
+
+    container.insertAdjacentHTML("afterbegin", markup);
   } catch (error) {
     console.log(error);
   }
@@ -31,4 +55,4 @@ const fetchapi = async function () {
 
 fetchapi();
 
-console.log("after api call");
+// console.log("after api call");
