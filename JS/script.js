@@ -25,7 +25,7 @@ const fetchapi = async function () {
     };
     console.log(recipes);
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 };
 
