@@ -32,28 +32,3 @@ const fetchapi = async function () {
 fetchapi();
 
 console.log("after api call");
-
-// cooking_time
-// :
-// 45
-// id
-// :
-// "5ed6604591c37cdc054bc886"
-// image_url
-// :
-// "http://forkify-api.herokuapp.com/images/FlatBread21of1a180.jpg"
-// ingredients
-// :
-// (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// publisher
-// :
-// "My Baking Addiction"
-// servings
-// :
-// 4
-// source_url
-// :
-// "http://www.mybakingaddiction.com/spicy-chicken-and-pepper-jack-pizza-recipe/"
-// title
-// :
-// "Spicy Chicken and Pepper Jack Pizza"

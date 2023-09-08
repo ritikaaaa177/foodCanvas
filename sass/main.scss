@@ -5,33 +5,77 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-$bgcolor: #023e8a;
-$textcolor: yellow; //variables
-$hovercolor: white;
+// $bgcolor: #023e8a;
+// $textcolor: yellow; //variables
+// $hovercolor: white;
 
-@import "mixin";
+// @import "mixin";
 
-header {
-  @include headercode(green);
+// header {
+//   @include headercode(green);
 
-  //nesting
-  h1 {
-    @include commoncode;
-    &:hover {
-      color: $hovercolor;
-    }
+//   //nesting
+//   h1 {
+//     @include commoncode;
+//     &:hover {
+//       color: $hovercolor;
+//     }
 
-    &::after {
-      content: " my dear?";
-      color: pink;
-    }
-  }
+//     &::after {
+//       content: " my dear?";
+//       color: pink;
+//     }
+//   }
 
-  p {
-    @include commoncode;
-  }
+//   p {
+//     @include commoncode;
+//   }
+// }
+
+// .second-header {
+//   @include headercode(blue);
+// }\
+
+@mixin subbox {
+  height: 350px;
+  background-color: #edf6f9;
 }
 
-.second-header {
-  @include headercode(blue);
+body {
+  background-color: orange;
+}
+
+.container {
+  width: 887px;
+  height: 700px;
+  // border: 2px solid red;
+  position: relative;
+  left: 300px;
+  top: 60px;
+  background-color: white;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+
+  .card1 {
+    width: 300px;
+    border: 2px solid red;
+    background-color: #f0efeb;
+  }
+
+  .card2 {
+    border: 2px solid green;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    .subcard1 {
+      @include subbox;
+    }
+
+    .subcard2 {
+      @include subbox;
+    }
+  }
 }
