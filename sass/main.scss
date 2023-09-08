@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+$bgcolor: #023e8a;
+$textcolor: yellow; //variables
+$hovercolor: white;
+
+@import "mixin";
+
+header {
+  @include headercode(green);
+
+  //nesting
+  h1 {
+    @include commoncode;
+    &:hover {
+      color: $hovercolor;
+    }
+
+    &::after {
+      content: " my dear?";
+      color: pink;
+    }
+  }
+
+  p {
+    @include commoncode;
+  }
+}
+
+.second-header {
+  @include headercode(blue);
+}

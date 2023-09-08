@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+header {
+  width: 80%;
+  height: 80vh;
+  background-color: green;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  header h1 {
+    color: yellow;
+    text-transform: lowercase; }
+    header h1:hover {
+      color: white; }
+    header h1::after {
+      content: " my dear?";
+      color: pink; }
+  header p {
+    color: yellow;
+    text-transform: lowercase; }
+
+.second-header {
+  width: 80%;
+  height: 80vh;
+  background-color: blue;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
