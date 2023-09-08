@@ -36,8 +36,8 @@
 //   @include headercode(blue);
 // }\
 
-@mixin subbox {
-  height: 350px;
+@mixin subbox($height) {
+  height: $height;
   background-color: #edf6f9;
 }
 
@@ -71,11 +71,16 @@ body {
     flex-direction: column;
 
     .subcard1 {
-      @include subbox;
+      @include subbox(300px);
     }
 
     .subcard2 {
-      @include subbox;
+      @include subbox(400px);
+
+      .div1 {
+        height: 80px;
+        border: 2px solid red;
+      }
     }
   }
 }
