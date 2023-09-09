@@ -55,7 +55,7 @@ const fetchapi = async function () {
     card2.innerHTML = "";
     const markup = ` 
 
-    <div class="card2">
+    
 
           
 
@@ -92,11 +92,11 @@ const fetchapi = async function () {
             }">Directions</a></button>
         </div>
     </div>
-    </div>
+ 
 
 `;
 
-    container.insertAdjacentHTML("afterbegin", markup);
+    card2.insertAdjacentHTML("afterbegin", markup);
   } catch (error) {
     console.log(error);
   }
