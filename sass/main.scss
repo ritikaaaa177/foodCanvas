@@ -59,6 +59,34 @@ body {
   background-color: orange;
 }
 
+.spinner {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+    // visibility: hidden;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    // visibility: hidden;
+  }
+}
+
 .navbar {
   width: 887px;
   height: 59px;
@@ -103,7 +131,7 @@ body {
   top: 60px;
   background-color: $varcolor4;
   // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+  // border-radius: 20px;
   display: flex;
   flex-direction: row;
 
@@ -163,12 +191,32 @@ body {
       }
 
       .div2 {
+        h1 {
+          position: relative;
+          left: 187px;
+          font-size: 21px;
+          top: 21px;
+          color: orange;
+          font-style: italic;
+          text-shadow: 2px 2px yellow;
+        }
+        .list {
+          position: relative;
+          left: 45px;
+          top: 46px;
+
+          li {
+            margin-top: 4px;
+            margin-left: 15px;
+          }
+        }
+
         .btn {
           width: 165px;
           height: 41px;
           /* margin: auto; */
           margin-left: 204px;
-          margin-top: 257px;
+          margin-top: 88px;
           background-color: orange;
           border: 2px solid white;
           border-radius: 25px;
