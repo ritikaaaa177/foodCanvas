@@ -25,13 +25,15 @@ const spinnerMarkup = function (containerel) {
 
 const fetchapi = async function () {
   try {
+    const id = window.location.hash.slice(1);
+    console.log(id);
     spinnerMarkup(container);
     const res = await axios.get(
-      "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886"
+      `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
       // "https://forkify-api.herokuapp.com/api/v2/recipes/45e62102-7d79-43e8-84d6-8d160bd6ac34"
     );
     // console.log(res.data);
-
+    if (!id) return;
     // console.log(res.data.data.recipe);
     let { recipe } = res.data.data;
 
@@ -49,12 +51,14 @@ const fetchapi = async function () {
     };
 
     console.log(recipes);
+    const card2 = document.querySelector(".card2");
+    card2.innerHTML = "";
+    const markup = ` 
 
-    const markup = ` <div class="card1">
+    <div class="card2">
 
-    Hi i am search bar
-</div>
-<div class="card2">
+          
+
     <div class="subcard1">
 
         <img src="${recipes.imageUrl}" alt="recipeimage">
@@ -88,7 +92,8 @@ const fetchapi = async function () {
             }">Directions</a></button>
         </div>
     </div>
-</div>
+    </div>
+
 `;
 
     container.insertAdjacentHTML("afterbegin", markup);
@@ -97,6 +102,8 @@ const fetchapi = async function () {
   }
 };
 
-fetchapi();
-
 console.log("after api call");
+
+["hashchange", "load"].forEach((e) => window.addEventListener(e, fetchapi));
+
+// window.addEventListener("hashchange", fetchapi);

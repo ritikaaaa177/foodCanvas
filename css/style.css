@@ -70,7 +70,7 @@ body {
   display: flex;
   flex-direction: row; }
   .container .card1 {
-    width: 300px;
+    width: 293px;
     background-color: #f0efeb; }
   .container .card2 {
     width: 600px;
@@ -127,7 +127,7 @@ body {
         height: 41px;
         /* margin: auto; */
         margin-left: 204px;
-        margin-top: 88px;
+        margin-top: 64px;
         background-color: orange;
         border: 2px solid white;
         border-radius: 25px; }
