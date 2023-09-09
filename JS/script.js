@@ -45,7 +45,7 @@ const fetchapi = async function () {
             <p class="servings">${recipes.servings} people</p>
         </div>
         <div class="div2">
-            Hi, I am division2
+            <button class="btn"><a href="${recipes.sourceUrl}">Directions</a></button>
         </div>
     </div>
 </div>`;
